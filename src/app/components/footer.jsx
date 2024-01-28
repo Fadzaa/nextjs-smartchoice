@@ -8,7 +8,7 @@ import {
 
 function Footer() {
   return (
-    <div className="bg-primary justify-center items-center flex flex-col mt-12 px-[21px] py-[70px]">
+    <div className="bg-primary justify-center items-center  flex flex-col px-[21px] py-[70px]">
       <div className="flex items-center text-white gap-3">
         <Image
           className="w-28"

@@ -49,7 +49,7 @@ function LandingComponentTwo() {
             className="w-[25%] h-full items-center justify-evenly flex flex-col  shadow-xl relative rounded-3xl overflow-hidden"
             style={{ boxShadow: "0 4px 8px rgba(255, 113, 113, 0.4)" }}
           >
-            <Image src={item.image} className="w-52 items-center" />
+            <Image src={item.image} alt="image-card" className="w-52 items-center" />
             <div className="w-full flex flex-col px-16 gap-2">
               <h2 className="text-[28px] font-semibold text-primary">
                 {item.title}
