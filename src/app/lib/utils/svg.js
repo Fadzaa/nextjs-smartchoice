@@ -6,6 +6,9 @@ import iconTwitterWhite from '@/app/lib/assets/svg/icon-twitter-white.svg'
 import iconCountdown from '@/app/lib/assets/svg/icon-countdown.svg'
 import topCountdown from '@/app/lib/assets/svg/top-countdown.svg'
 import bottomCountdown from '@/app/lib/assets/svg/bottom-countdown.svg'
+import iconWarning from '@/app/lib/assets/svg/icon-warning.svg'
+import cardTopDecor from '@/app/lib/assets/svg/card-top-decor.svg'
+import cardBottomDecor from '@/app/lib/assets/svg/card-bot-decor.svg'
 
 export {
     logoSmartChoice,
@@ -15,5 +18,8 @@ export {
     logoSmartChoiceWhite,
     iconCountdown,
     topCountdown,
-    bottomCountdown
+    bottomCountdown,
+    iconWarning,
+    cardTopDecor,
+    cardBottomDecor
 }
