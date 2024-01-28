@@ -7,6 +7,7 @@ import mahfud from '@/app/lib/assets/image/mahfud.png';
 import discussingIdeas from '@/app/lib/assets/image/discussing-ideas.png';
 import humanSearching from '@/app/lib/assets/image/human-searching.png';
 import manStudying from '@/app/lib/assets/image/man-studying.png';
+import girls from '@/app/lib/assets/image/girls.png';
 
 export {
     prabowo,
@@ -17,5 +18,6 @@ export {
     mahfud,
     discussingIdeas,
     humanSearching,
-    manStudying
+    manStudying,
+    girls
 }
