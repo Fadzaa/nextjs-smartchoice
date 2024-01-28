@@ -51,7 +51,7 @@ export default function LandingComponentThree() {
               className="w-[30%] h-full px-8 py-4 flex flex-col gap-4 bg-white rounded-xl"
               style={{ boxShadow: "0 5px 4px rgba(255, 113, 113, 0.4)" }}
             >
-              <Image src={candidate.imageSrc} className="w-full rounded-xl" />
+              <Image src={candidate.imageSrc} alt="calon-presiden" className="w-full rounded-xl" />
               <h1 className="text-xl font-semibold text-black">
                 {candidate.name}
               </h1>

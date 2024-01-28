@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LandingComponentFour() {
   return (
-    <main className="w-full h-[70vh] px-16 mt-32">
+    <main className="w-full h-[70vh] px-16 mt-32 ">
       <div
         className="w-full h-full rounded-3xl flex gap-6 flex-col items-center justify-center  relative overflow-hidden"
         style={{ boxShadow: "0 4px 8px rgba(255, 113, 113, 0.4)" }}

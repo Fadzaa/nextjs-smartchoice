@@ -33,7 +33,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href={"/job"} className="text-base">
+                <Link href={"/partai"} className="text-base">
                   Partai
                 </Link>
               </li>
