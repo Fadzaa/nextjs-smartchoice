@@ -32,7 +32,7 @@ const data = [
 
 function LandingComponentTwo() {
   return (
-    <div className="w-full bg-white h-[80vh] justify-between px-20 flex pt-28 flex-col items-center">
+    <div className="w-full bg-white h-[80vh] justify-between px-16 flex pt-28 flex-col items-center">
       <div className="flex flex-col ">
         <h2 className="font-semibold text-black text-3xl">
           3 Cara Untuk Memilih
