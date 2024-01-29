@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {iconWarning} from "@/app/lib/utils/svg";
-import OuterCard from "@/app/(pages)/about/components/outer-card";
+import OuterCard from "@/app/(pages)/kandidat/components/outer-card";
 import {anies, cakimin, ganjar, gibran, mahfud, prabowo} from "@/app/lib/utils/image";
 
 function AboutPage() {

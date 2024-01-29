@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {cardBottomDecor, cardTopDecor} from "@/app/lib/utils/svg";
-import InnerCard from "@/app/(pages)/about/components/inner-card";
+import InnerCard from "@/app/(pages)/kandidat/components/inner-card";
 import Link from "next/link";
 
 
