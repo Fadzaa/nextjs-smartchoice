@@ -23,7 +23,7 @@ export default function Navbar() {
           <div className="flex h-full items-center flex-row gap-10">
           <ul className="hidden text-textPrimary font-medium gap-8 lg:flex ">
               <li>
-                <Link href={"/courses"} className="text-base">
+                <Link href={"/kandidat"} className="text-base">
                   Kandidat
                 </Link>
               </li>
@@ -43,11 +43,13 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-  
+
             <div>
+                <Link href={"/countdown"}>
               <button className="bg-primary text-white rounded-lg px-5 py-2 text-base font-medium">
                 Pemilu 2024
               </button>
+                </Link>
             </div>
   
           </div>
