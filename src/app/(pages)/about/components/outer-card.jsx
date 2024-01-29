@@ -2,7 +2,7 @@ import Image from "next/image";
 import {cardBottomDecor, cardTopDecor} from "@/app/lib/utils/svg";
 import InnerCard from "@/app/(pages)/about/components/inner-card";
 import Link from "next/link";
-import {anies} from "@/app/lib/utils/image";
+
 
 function OuterCard({number, namePres, nameVice, slogan, path, image1, fullName1, position1, image2, fullName2, position2}) {
     return (

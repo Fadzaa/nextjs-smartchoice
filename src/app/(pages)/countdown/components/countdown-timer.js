@@ -3,11 +3,8 @@
 import React, {useEffect, useState} from 'react';
 
 function CountdownTimer({initialTime}) {
-    const storageKey = 'countdownDate';
-    const [time, setTime] = useState(() => {
-        const storedTime = localStorage.getItem(storageKey);
-        return storedTime ? parseInt(storedTime, 10) : initialTime;
-    });
+    // const storageKey = 'countdownDate';
+    const [time, setTime] = useState(initialTime);
     const [days, setDays] = useState("");
     const [hours, setHours] = useState("");
     const [minutes, setMinutes] = useState("");
@@ -15,10 +12,10 @@ function CountdownTimer({initialTime}) {
 
     useEffect(() => {
         if (time <= 0) return;
-
+        localStorage.clear()
         const intervalId = setInterval(() => {
             setTime((prevTime) => {
-                localStorage.setItem(storageKey, String(prevTime - 1));
+                // localStorage.setItem(storageKey, String(prevTime - 1));
                 return prevTime - 1;
             });
         }, 1000);
