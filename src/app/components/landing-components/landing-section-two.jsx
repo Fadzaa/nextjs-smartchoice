@@ -32,7 +32,7 @@ const data = [
 
 function LandingComponentTwo() {
   return (
-    <div className="w-full bg-white h-[80vh] justify-between px-20 flex pt-28 flex-col items-center">
+    <div className="w-full bg-white h-[80vh] justify-between px-16 mb-12 flex mt-32 flex-col items-center">
       <div className="flex flex-col ">
         <h2 className="font-semibold text-black text-3xl">
           3 Cara Untuk Memilih
@@ -42,11 +42,11 @@ function LandingComponentTwo() {
           Paslon Terbaik
         </button>
       </div>
-      <div className="flex flex-row w-screen mt-20 h-[35vw] justify-evenly gap-12">
+      <div className="flex flex-row w-screen mt-20    justify-evenly gap-12">
         {data.map((item, index) => (
           <div
             key={index}
-            className="w-[25%] h-full items-center justify-evenly flex flex-col  shadow-xl relative rounded-3xl overflow-hidden"
+            className="w-[25%] py-12  items-center justify-evenly flex flex-col  shadow-xl relative rounded-3xl overflow-hidden"
             style={{ boxShadow: "0 4px 8px rgba(255, 113, 113, 0.4)" }}
           >
             <Image src={item.image} alt="image-card" className="w-52 items-center" />

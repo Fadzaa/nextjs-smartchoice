@@ -22,10 +22,10 @@ const data = [
 
 export default function LandingComponentThree() {
   return (
-    <main className="w-screen h-[45vh] mt-32 px-16">
-      <div className="w-full h-full flex flex-row rounded-2xl py-8 px-16 bg-[#FCEAEC]">
-        <div className="w-2/5 h-full ">
-          <div className="w-full h-full gap-8 flex flex-col">
+    <div className="w-screen mt-44 px-16">
+      <div className="w-full h-full flex flex-row gap-2 rounded-2xl py-12 px-14 bg-[#FCEAEC]">
+        <div className="w-2/5  ">
+          <div className="w-full  gap-8 flex flex-col">
             <h1 className="text-primary font-bold text-5xl leading-[60px]">
               <span className="text-black">Kenali</span> rekam jejak & gagasan{" "}
               <span className="text-black">kandidat</span>
@@ -44,11 +44,11 @@ export default function LandingComponentThree() {
             </div>
           </div>
         </div>
-        <div className="w-3/5 h-full flex flex-row justify-between">
+        <div className="w-3/5 flex flex-row justify-between">
           {data.map((candidate, index) => (
             <div
               key={index}
-              className="w-[30%] h-full px-8 py-4 flex flex-col gap-4 bg-white rounded-xl"
+              className="w-[31%]  px-8 py-6 flex flex-col gap-4 bg-white rounded-xl"
               style={{ boxShadow: "0 5px 4px rgba(255, 113, 113, 0.4)" }}
             >
               <Image src={candidate.imageSrc} alt="calon-presiden" className="w-full rounded-xl" />
@@ -62,6 +62,6 @@ export default function LandingComponentThree() {
           ))}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

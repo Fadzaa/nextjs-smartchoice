@@ -23,7 +23,7 @@ function CountdownPage() {
                 </div>
                 <div className="h-full w-full">
                 <Image
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-fill"
                         src={iconCountdown}
                         alt="Icon Countdown"
                         width={1000}
