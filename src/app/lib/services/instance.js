@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://api-dinacom.rplrus.com/api',
+    baseURL: 'https://ad6c-103-28-113-244.ngrok-free.app/',
     headers: {
         'Content-Type': 'application/json',
     },
