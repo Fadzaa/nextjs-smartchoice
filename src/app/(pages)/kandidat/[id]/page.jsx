@@ -2,6 +2,8 @@ import CardCandidate from "@/app/(pages)/kandidat/[id]/components/card-candidate
 import {anies, cakimin} from "@/app/lib/utils/image";
 import CardPartai from "@/app/(pages)/kandidat/[id]/components/card-partai";
 import Link from "next/link";
+import Image from "next/image";
+import {iconDownload, iconPuzzle} from "@/app/lib/utils/svg";
 
 function Page({params}) {
     const data = [
@@ -44,8 +46,11 @@ function Page({params}) {
 
     return (
         <div className="h-[150vh] w-screen bg-white pt-32 px-[56px]">
+
             <h1 className="text-3xl font-bold text-primary ">No. {params.id}</h1>
+
             <div className="w-full h-full flex gap-10">
+
                 <div className="w-full h-full mt-10">
                     <h1 className="font-bold text-[#333132] italic text-[48px]">Anies & Cak Imin</h1>
                     <h2 className="font-medium text-[#333132] italic text-[24px] mb-10">&apos;Indonesia Adil Makmur untuk Semua&apos;</h2>
@@ -70,15 +75,32 @@ function Page({params}) {
                 </div>
 
                 <div className="w-full h-full mt-10">
+
                     <div className="w-full flex justify-between items-center">
-                        <h1 className="text-primary font-semibold text-[36px]">Gagasan Utama</h1>
+
+                        <div className="flex gap-3 items-center">
+                            <Image
+                                src={iconPuzzle}
+                                alt="Icon Puzzle"
+                                width={40}
+                                height={40}
+                            />
+                            <h1 className="text-primary font-semibold text-[32px]">Gagasan Utama</h1>
+                        </div>
+
                         <button className="h-[40px] w-1/4 rounded-xl bg-primary">
                             <Link
                                 href={`https://drive.google.com/drive/u/0/folders/1Q5YafoG9q6oUY4rZJXCm1nBC6GnXHCAr`}
                                 target="_blank"
                             >
 
-                                <div>
+                                <div className="flex gap-2 items-center justify-center">
+                                    <Image
+                                        src={iconDownload}
+                                        alt="Icon Download"
+                                        width={16}
+                                        height={16}
+                                    />
                                     <h2 className="font-medium text-[12px]">Unduh Visi Misi</h2>
                                 </div>
 
@@ -86,8 +108,12 @@ function Page({params}) {
                         </button>
 
                 </div>
+
+            {/*        Place Accordion HERE */}
             </div>
+
         </div>
+
         </div>
     );
 }
