@@ -2,10 +2,12 @@ import Image from "next/image";
 import {iconWarning} from "@/app/lib/utils/svg";
 import OuterCard from "@/app/(pages)/kandidat/components/outer-card";
 import {anies, cakimin, ganjar, gibran, mahfud, prabowo} from "@/app/lib/utils/image";
+import Link from "next/link";
 
 function AboutPage() {
     const data = [
         {
+            number: 1,
             namePres: 'Anis',
             nameVice: 'Cak Imin',
             slogan: 'Indonesia Adil Makmur untuk Semua',
@@ -18,6 +20,7 @@ function AboutPage() {
             position2: 'Calon Wakil Presiden'
         },
         {
+            number: 2,
             namePres: 'Prabowo',
             nameVice: 'Gibran',
             slogan: 'Bersama Indonesia Maju Menuju Indonesia Emas 2045',
@@ -31,6 +34,7 @@ function AboutPage() {
         },
 
         {
+            number: 3,
             namePres: 'Ganjar',
             nameVice: 'Mahfud',
             slogan: 'Gerak Cepat Menuju Indonesia Unggul',
@@ -70,10 +74,11 @@ function AboutPage() {
             <div className="w-full grid grid-cols-3 gap-10">
                 {data.map((item, index) => {
                     return (
-                        <OuterCard
-                            key={index}
-                            {...data[index]}
-                        />
+                           <OuterCard
+                               key={index}
+                               {...data[index]}
+                           />
+
                     )
                 })}
             </div>
