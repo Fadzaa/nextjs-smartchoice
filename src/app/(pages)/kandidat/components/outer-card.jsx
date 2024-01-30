@@ -29,7 +29,7 @@ function OuterCard({number, namePres, nameVice, slogan, path, image1, fullName1,
                         <InnerCard image={image2} name={fullName2} position={position2}/>
                     </div>
 
-                    <Link href={`${path}`}>
+                    <Link href={`/kandidat/${number}`}>
                         <button className="w-full h-[60px] bg-primary rounded-xl mt-8">
                             <h3 className="font-bold text-white text-[18px]">Visi dan Misi</h3>
                         </button>
