@@ -9,6 +9,9 @@ import bottomCountdown from '@/app/lib/assets/svg/bottom-countdown.svg'
 import iconWarning from '@/app/lib/assets/svg/icon-warning.svg'
 import cardTopDecor from '@/app/lib/assets/svg/card-top-decor.svg'
 import cardBottomDecor from '@/app/lib/assets/svg/card-bot-decor.svg'
+import iconArrow from '@/app/lib/assets/svg/icon-arrow.svg'
+import iconPuzzle from '@/app/lib/assets/svg/icon-puzzle.svg'
+import iconDownload from '@/app/lib/assets/svg/icon-download.svg'
 
 export {
     logoSmartChoice,
@@ -21,5 +24,8 @@ export {
     bottomCountdown,
     iconWarning,
     cardTopDecor,
-    cardBottomDecor
+    cardBottomDecor,
+    iconArrow,
+    iconPuzzle,
+    iconDownload
 }
