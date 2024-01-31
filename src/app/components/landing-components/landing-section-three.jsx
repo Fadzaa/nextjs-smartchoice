@@ -22,8 +22,8 @@ const data = [
 
 export default function LandingComponentThree() {
   return (
-    <div className="w-screen mt-44 px-16">
-      <div className="w-full h-full flex flex-row gap-2 rounded-2xl py-12 px-14 bg-[#FCEAEC]">
+    <div className="w-screen h-[80vh] mt-44 px-16">
+      <div className="w-full  flex flex-row gap-2 rounded-2xl py-12 px-14 bg-[#FCEAEC]">
         <div className="w-2/5  ">
           <div className="w-full  gap-8 flex flex-col">
             <h1 className="text-primary font-bold text-5xl leading-[60px]">
