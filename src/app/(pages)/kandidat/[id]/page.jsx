@@ -41,16 +41,16 @@ function Page({ params }) {
 
   const data = [
     {
+      id: 1,
       image: anies,
       name: "Anies Baswedan",
       position: "Calon Presiden No Urut 1",
-      path: "/kandidat/anies-baswedan",
     },
     {
+      id: 2,
       image: cakimin,
       name: "Cak Imin",
       position: "Calon Wakil Presiden No Urut 1",
-      path: "/kandidat/cak-imin",
     },
   ];
 
@@ -164,6 +164,7 @@ function Page({ params }) {
         <h1 className="text-3xl font-bold text-primary ">No. {params.id}</h1>
 
         <div className="w-full h-full flex gap-10">
+
           <div className="w-full h-full mt-10">
             <h1 className="font-bold text-[#333132] italic text-[48px]">
               Anies & Cak Imin
@@ -186,7 +187,9 @@ function Page({ params }) {
           </div>
 
           <div className="w-full h-full mt-10">
+
             <div className="w-full flex mb-24 justify-between items-center">
+
               <div className="flex gap-3 items-center">
                 <Image
                   src={iconPuzzle}
@@ -215,8 +218,11 @@ function Page({ params }) {
                   </div>
                 </Link>
               </button>
+
             </div>
+
             <div className="w-full h-auto">
+
               {dataGagasan.map((data, index) => (
                 <Accordion
                   style={{
@@ -241,7 +247,7 @@ function Page({ params }) {
                   >
                     <div className="flex flex-row gap-3 items-center">
                       <div className="w-8 h-8 bg bg-primary bg-opacity-25 text-primary rounded-full flex items-center justify-center">
-                        <HiOutlineClipboardList size={20} />
+                        {iconIdeas[index].icon}
                       </div>
                       <Typography>{data.idea_title}</Typography>
                     </div>
@@ -253,9 +259,13 @@ function Page({ params }) {
                   </AccordionDetails>
                 </Accordion>
               ))}
+
             </div>
+
           </div>
+
         </div>
+
       </div>
     </ThemeProvider>
   );

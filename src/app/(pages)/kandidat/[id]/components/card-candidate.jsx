@@ -1,9 +1,10 @@
 import Image from "next/image";
 import {anies} from "@/app/lib/utils/image";
 import {iconArrow} from "@/app/lib/utils/svg";
+import Link from "next/link";
 
 
-function CardCandidate({image, name, position, path}) {
+function CardCandidate({image, name, position, id}) {
     return (
         <div className="w-full h-[240px] border border-black border-opacity-10 rounded-[20px] flex p-7 mb-6">
             <Image
@@ -18,16 +19,18 @@ function CardCandidate({image, name, position, path}) {
                     <h1 className="font-bold text-[#2B2B2B] text-lg">{name}</h1>
                     <h2 className="font-medium text-[#5C5757] text-base">{position}</h2>
                 </div>
-                <div className="flex mb-7 gap-3 items-center">
-                    <h1 className="text-primary font-bold">Pelajari Profil</h1>
-                    <Image
-                        src={iconArrow}
-                        alt="Icon Arrow"
-                        width={16}
-                        height={16}
-                    />
+                <Link href={`/profile-kandidat/${id}`}>
+                    <div className="flex mb-7 gap-3 items-center cursor-pointer">
+                        <h1 className="text-primary font-bold">Pelajari Profil</h1>
+                        <Image
+                            src={iconArrow}
+                            alt="Icon Arrow"
+                            width={16}
+                            height={16}
+                        />
 
-                </div>
+                    </div>
+                </Link>
             </div>
         </div>
     );
