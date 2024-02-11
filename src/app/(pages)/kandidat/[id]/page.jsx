@@ -10,48 +10,23 @@ import { FaMoneyBill } from "react-icons/fa";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { IoEarthSharp } from "react-icons/io5";
 import AccordionIdeas from "./components/accordion-idea";
+import candidatePair from "@/app/lib/services/candidate-pair";
 
-function Page({ params }) {
-  const data = [
+async function Page({ params }) {
+  const data = await candidatePair(params.id)
+
+  const dataCandidates = [
     {
       id: 1,
-      image: anies,
-      name: "Anies Baswedan",
-      position: "Calon Presiden No Urut 1",
+      image: data.pres_image,
+      name: data.pres_candidate,
+      position: `Calon Presiden No Urut ${params.id}`,
     },
     {
       id: 2,
-      image: cakimin,
-      name: "Cak Imin",
-      position: "Calon Wakil Presiden No Urut 1",
-    },
-  ];
-
-  const dataPartai = [
-    {
-      image: anies,
-
-      name: "Anies Baswedan",
-      description:
-        "Partai Kebangkitan Bangsa (PKB) adalah partai politik Islam-Nasionalis yang didirikan pada tahun 1998 di awal era reformasi Indonesia. PKB deskripsikan oleh Carnegie Endowment sebagai partai sayap kanan yang memiliki hubungan sejarah kuat dengan organisasi Islam terbesar di Indonesia, Nahdlatul Ulama (NU).",
-    },
-    {
-      image: anies,
-      name: "Anies Baswedan",
-      description:
-        "Partai Kebangkitan Bangsa (PKB) adalah partai politik Islam-Nasionalis yang didirikan pada tahun 1998 di awal era reformasi Indonesia. PKB deskripsikan oleh Carnegie Endowment sebagai partai sayap kanan yang memiliki hubungan sejarah kuat dengan organisasi Islam terbesar di Indonesia, Nahdlatul Ulama (NU).",
-    },
-    {
-      image: anies,
-      name: "Anies Baswedan",
-      description:
-        "Partai Kebangkitan Bangsa (PKB) adalah partai politik Islam-Nasionalis yang didirikan pada tahun 1998 di awal era reformasi Indonesia. PKB deskripsikan oleh Carnegie Endowment sebagai partai sayap kanan yang memiliki hubungan sejarah kuat dengan organisasi Islam terbesar di Indonesia, Nahdlatul Ulama (NU).",
-    },
-    {
-      image: anies,
-      name: "Anies Baswedan",
-      description:
-        "Partai Kebangkitan Bangsa (PKB) adalah partai politik Islam-Nasionalis yang didirikan pada tahun 1998 di awal era reformasi Indonesia. PKB deskripsikan oleh Carnegie Endowment sebagai partai sayap kanan yang memiliki hubungan sejarah kuat dengan organisasi Islam terbesar di Indonesia, Nahdlatul Ulama (NU).",
+      image: data.vice_image,
+      name: data.vice_candidate,
+      position: `Calon Wakil Presiden No Urut ${params.id}`,
     },
   ];
 
@@ -59,38 +34,32 @@ function Page({ params }) {
     {
       id: 1,
       idea_title: "Pendidikan",
-      idea_description:
-        "Indonesia harus melakukan investasi yang serius untuk menaikkan kualitas dan akses pendidikan. Laboratorium sains, bengkel kerja, dan perpustakan harus dibangun di semua sekolah yang membutuhkan. Anggaran dan daya saing riset perlu ditingkatkan.",
+      idea_description: data.education,
     },
     {
       id: 2,
       idea_title: "Kesehatan",
-      idea_description:
-        "Layanan kesehatan tanpa diskriminasi yang andal dan efisien",
+      idea_description: data.health,
     },
     {
       id: 3,
       idea_title: "Lapangan Kerja",
-      idea_description:
-        "Kota adalah tempat dimana orang-orang dengan kekayaan melimpah dapat hidup dengan nyaman, sementara di sudut-sudut kota, banyak keluarga miskin berjuang untuk sekedar hidup. Negara harus hadir untuk memitigasi ketimpangan sosial agar tidak menjadi konflik antar kelas.",
+      idea_description: data.job,
     },
     {
       id: 4,
       idea_title: "Pemberantasan Korupsi",
-      idea_description:
-        "Mengembalikan peran KPK dalam pemberantasan korupsi yang independen tidak tebang pilih dan memperkuat sinergi dengan aparat penegak hukum lain.",
+      idea_description: data.corrupt,
     },
     {
       id: 5,
       idea_title: "Kebebasan Berekspresi",
-      idea_description:
-        "Memperbaiki regulasi yang berpotensi menimbulkan salah interpretasi yang dapat menghambat upaya menjamin kebebasan berbicara, berkumpul, dan berekspresi",
+      idea_description:data.freedom_of_expression,
     },
     {
       id: 6,
       idea_title: "Krisis Iklim",
-      idea_description:
-        "Pembangunan tanpa visi ekologis menyulut krisis biodiversity yang merupakan aset berharga kita.",
+      idea_description: data.climate_crisis,
     },
   ];
 
@@ -137,21 +106,22 @@ function Page({ params }) {
         <div className="w-full h-full flex gap-10">
           <div className="w-full h-full mt-10">
             <h1 className="font-bold text-[#333132] italic text-[48px]">
-              Anies & Cak Imin
+              {data.pair_name}
             </h1>
             <h2 className="font-medium text-[#333132] italic text-[24px] mb-10">
-              &apos;Indonesia Adil Makmur untuk Semua&apos;
+              {data.pair_slogan}
             </h2>
-            {data.map((item, index) => (
-              <CardCandidate key={index} {...data[index]} />
+
+            {dataCandidates.map((item, index) => (
+              <CardCandidate key={index} {...dataCandidates[index]} />
             ))}
 
             <h1 className="text-primary font-semibold text-[24px]">
               Didukung oleh partai:
             </h1>
             <div className="flex gap-5 mt-5 relative">
-              {dataPartai.map((item, index) => (
-                <CardPartai key={index} {...dataPartai[index]} />
+              {data.parties.map((item, index) => (
+                <CardPartai key={index} {...data.parties[index]} />
               ))}
             </div>
           </div>
@@ -172,7 +142,7 @@ function Page({ params }) {
 
               <button className="h-[40px] w-1/4 rounded-xl bg-primary">
                 <Link
-                  href={`https://drive.google.com/drive/u/0/folders/1Q5YafoG9q6oUY4rZJXCm1nBC6GnXHCAr`}
+                  href={data.vision_mission_link}
                   target="_blank"
                 >
                   <div className="flex gap-2 items-center justify-center">
