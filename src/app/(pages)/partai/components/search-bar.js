@@ -7,7 +7,7 @@ import {useDebounce} from "use-debounce";
 function SearchBar() {
     const router = useRouter()
     const [searchQuery, setSearchQuery] = useState('');
-    const [query] = useDebounce(searchQuery, 500);
+    const [query] = useDebounce(searchQuery, 300);
 
     useEffect(() => {
         if (searchQuery) {
