@@ -12,6 +12,7 @@ import cardBottomDecor from '@/app/lib/assets/svg/card-bot-decor.svg'
 import iconArrow from '@/app/lib/assets/svg/icon-arrow.svg'
 import iconPuzzle from '@/app/lib/assets/svg/icon-puzzle.svg'
 import iconDownload from '@/app/lib/assets/svg/icon-download.svg'
+import trophyAchievment from '@/app/lib/assets/svg/trophy-achievment.svg'
 
 export {
     logoSmartChoice,
@@ -27,5 +28,6 @@ export {
     cardBottomDecor,
     iconArrow,
     iconPuzzle,
-    iconDownload
+    iconDownload,
+    trophyAchievment,
 }
