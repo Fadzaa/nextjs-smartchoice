@@ -5,8 +5,11 @@ import SosmedCandidate from "@/app/(pages)/profile-kandidat/[id]/components/sosm
 import AchievementCandidate from "@/app/(pages)/profile-kandidat/[id]/components/achievement-candidate";
 import { FiArrowLeftCircle } from "react-icons/fi";
 import Link from "next/link";
+import candidateProfile from "@/app/lib/services/candidate-profile";
 
-function Page({ params }) {
+async function Page({ params }) {
+  const data = await candidateProfile(params.id);
+
   return (
     <div className=" w-screen pb-24 bg-white pt-32 px-[56px]">
       <Link href={`/kandidat`}>

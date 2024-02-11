@@ -1,10 +1,9 @@
 import instance from "@/app/lib/services/instance";
 
-export default async function partai(query) {
+export default async function candidatePair(id) {
     try {
         const res = await instance.get(
-            `/party`,
-            {params: {search: query}}
+            `/candidate_pair/${id}`
         );
         return res.data.data;
     }catch (err) {

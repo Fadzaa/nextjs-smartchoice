@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://ad6c-103-28-113-244.ngrok-free.app/',
+    baseURL: 'https://go-smartchoice-production.up.railway.app',
     headers: {
         'Content-Type': 'application/json',
     },
