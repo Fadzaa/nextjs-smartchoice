@@ -17,13 +17,13 @@ async function Page({ params }) {
 
   const dataCandidates = [
     {
-      id: 1,
+      id: data.pres_id,
       image: data.pres_image,
       name: data.pres_candidate,
       position: `Calon Presiden No Urut ${params.id}`,
     },
     {
-      id: 2,
+      id: data.vice_id,
       image: data.vice_image,
       name: data.vice_candidate,
       position: `Calon Wakil Presiden No Urut ${params.id}`,
