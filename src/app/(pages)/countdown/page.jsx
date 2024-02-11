@@ -4,7 +4,7 @@ import CountdownTimer from "@/app/(pages)/countdown/components/countdown-timer";
 
 function CountdownPage() {
     const date = new Date('2024-02-14T00:00:00')
-    const seconds = Math.floor((date - new Date()) / 1000)
+    const seconds = Math.floor((date - Date.now()) / 1000)
     return (
         <div className="h-[120vh] w-screen relative bg-white">
             <Image
