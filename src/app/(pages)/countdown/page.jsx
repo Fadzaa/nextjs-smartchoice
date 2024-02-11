@@ -13,6 +13,7 @@ function CountdownPage() {
                 alt="Top Countdown Decoration"
                 width={1000}
                 height={280}
+
             />
 
             <div className="h-full w-full flex items-center justify-center px-[100px] py-[295px]">
