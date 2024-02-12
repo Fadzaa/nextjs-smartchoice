@@ -28,18 +28,13 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href={"/internship"} className="text-base">
-                  Isu
+                <Link href={"/debat"} className="text-base">
+                  Debat
                 </Link>
               </li>
               <li>
                 <Link href={"/partai"} className="text-base">
                   Partai
-                </Link>
-              </li>
-              <li>
-                <Link href={"/article"} className="text-base">
-                  Tentang
                 </Link>
               </li>
             </ul>
