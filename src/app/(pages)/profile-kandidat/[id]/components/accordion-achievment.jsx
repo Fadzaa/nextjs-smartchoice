@@ -53,12 +53,12 @@ function AccordionAchievment({ dataGagasan, iconIdeas }) {
             >
               <div className="items-center">
                 
-                <Typography sx={{fontSize: "24px"}}>{data.idea_title}</Typography>
+                <Typography sx={{fontSize: "24px"}}>{data.title}</Typography>
               </div>
             </AccordionSummary>
             <AccordionDetails key={index}>
               <Typography sx={{ fontSize: "14px", fontWeight: "400" }}>
-                {data.idea_description}
+                {data.description}
               </Typography>
             </AccordionDetails>
           </Accordion>

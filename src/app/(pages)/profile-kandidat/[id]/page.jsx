@@ -26,27 +26,27 @@ async function Page({ params }) {
 
       <div className="flex flex-col gap-28">
         <HeroCandidate
-          name={"Prabowo Subianto"}
-          role={"Menteri Pertahanan dan Keamanan Periode 2019 - 2024"}
-          image={prabowo}
+          name={data.name}
+          role={data.position}
+          image={data.image}
           background={
-            "Innovative Solutions is a cutting-edge technology company that provides innovative solutions for businesses of all sizes. Founded in 2010, we are dedicated to helping our clients achieve their goals through our customized and effective technology solutions. With over a decade of experience, we have built a reputation for delivering high-quality services to our clients.\n"
+            data.short_profile
           }
         />
 
         <BiographyCandidate
-          number={2}
-          birthdatePlace={"17 Oktober 1951, Jakarta"}
-          position={"Calon Presiden"}
-          asset={"2,04 Trilliun"}
+          number={data.id}
+          birthdatePlace={data.birthday_place}
+          position={data.candidate_as}
+          asset={data.total_asset}
         />
 
         <SosmedCandidate
-          linkInstagram={"https://www.instagram.com/prabowo/"}
-          linkTwitter={"https://www.twitter.com/prabowo/"}
+          linkInstagram={data.link_instagram}
+          linkTwitter={data.link_twitter}
         />
 
-        <AchievementCandidate />
+        <AchievementCandidate dataGagasan={data.achievements} />
       </div>
     </div>
   );
