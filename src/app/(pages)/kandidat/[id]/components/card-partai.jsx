@@ -6,7 +6,7 @@ function CardPartai({image, name, description}) {
         <div className="
         bg-white
         h-[70px] w-[70px] duration-300 flex justify-center items-center border border-black border-opacity-10 rounded-xl p-3 hover:p-8
-        hover:w-full hover:h-auto hover:absolute hover:transition-transform transition-none hover:justify-start hover:items-start hover:flex-col
+        hover:w-full hover:h-auto hover:absolute hover:top-24 hover:transition-transform transition-none hover:justify-start hover:items-start hover:flex-col
         group
         ">
             <div className="group-hover:flex group-hover:items-center group-hover:gap-5 group-hover:mb-7 block">

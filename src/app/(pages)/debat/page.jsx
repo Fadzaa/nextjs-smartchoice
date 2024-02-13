@@ -35,7 +35,7 @@ export default async function DebatPage() {
     <div className="bg-white">
       <div className="py-20 pb-20">
         <TitleDebate />
-        <div className="flex flex-col gap-16 mx-24 ">
+        <div className="flex flex-col gap-32 mx-24 ">
           {listDebate.map((debate, index) => (
             <div
               key={index}
