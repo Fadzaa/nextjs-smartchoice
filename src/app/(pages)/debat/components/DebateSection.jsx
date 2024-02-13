@@ -2,7 +2,7 @@ import React from "react";
 
 export default function DebateSection({ createdAt, Title, Theme, LinkYt, index }) {
   return (
-    <div className={`flex flex-col justify-between ${index % 2 === 0 ? "text-start" : "text-end"} w-6/12`}>
+    <div className={`flex flex-col justify-between ${index % 2 === 0 ? "text-start" : "text-end"} w-5/12`}>
       <div className="flex flex-col gap-3">
         <h3 className="text-gray-400 font-medium text-lg">
           {createdAt}
