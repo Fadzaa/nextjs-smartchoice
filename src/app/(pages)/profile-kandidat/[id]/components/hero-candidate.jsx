@@ -12,7 +12,7 @@ function HeroCandidate({name, role, image, background}){
 
                 <div className="w-1/3 h-full">
                     <Image
-                        className="h-full w-full object-cover rounded-3xl"
+                        className="h-full w-full object-contain rounded-3xl"
                         src={image}
                         alt={name}
                         width={1000}
