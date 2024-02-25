@@ -1,11 +1,11 @@
 import statistic from "@/app/lib/services/statistic";
 import timestamp from "@/app/lib/services/timestamp-realcount";
+import ChartDoughnut from "./components/chart";
+import BasicSelect from "./components/textfield-select";
 
 export default async function RealCountPage() {
   const timestampData = await timestamp();
-  const timestampDate = new Date(timestampData);
 
-    const formattedDate = timestampDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
   const data = await statistic();
   const dataStatistic = [
     {
@@ -34,6 +34,9 @@ export default async function RealCountPage() {
     },
   ];
 
+  console.log(typeof data);
+
+
   return (
     <main className="w-screen pt-32 pb-32 px-36 bg-white ">
       <h1 className="text-textSemiBlack font-extrabold text-[80px] pt-24 pb-12 text-center">
@@ -55,6 +58,11 @@ export default async function RealCountPage() {
           ))}
         </div>
       </div>
+      <div className="w-1/2">
+        <BasicSelect data={timestampData}/>
+      </div>
+
+      <ChartDoughnut data={timestampData.paslon} />
     </main>
   );
 }
