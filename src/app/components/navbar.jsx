@@ -37,6 +37,12 @@ export default function Navbar() {
                   Partai
                 </Link>
               </li>
+              <li>
+                <Link href={"/realcount"} className="text-base">
+                  Real Count
+                </Link>
+              </li>
+              
             </ul>
 
             <div>
